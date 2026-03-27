@@ -1,0 +1,16 @@
+ДОГОВОР АРЕНДЫ № {contract_number}
+от {contract_date}
+
+{landlord_name}, в лице {landlord_director}, действующего на основании {landlord_basis},
+именуемый в дальнейшем «Арендодатель», с одной стороны, и
+{tenant_name}, в лице {tenant_director}, действующего на основании {tenant_basis},
+именуемый в дальнейшем «Арендатор», с другой стороны, заключили настоящий договор.
+
+1. Объект аренды: {object_address}
+2. Площадь: {area_sq_m} кв.м.
+3. Срок аренды: {term_text}
+4. Арендная плата: {rent_amount} ({rent_amount_words})
+
+Реквизиты Арендодателя:
+Адрес: {landlord_address}
+{landlord_details}
