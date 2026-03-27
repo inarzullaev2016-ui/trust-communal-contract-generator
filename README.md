@@ -11,6 +11,21 @@ pip install -r requirements.txt
 python main.py
 ```
 
+Для Windows (PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python .\main.py
+```
+
+После сборки portable-версии запуск:
+
+```powershell
+.\dist\trust_communal_contract_generator\trust_communal_contract_generator.exe
+```
+
 ## Функции
 
 - Сохранение реквизитов арендодателя в `settings/landlord_details.json`.
