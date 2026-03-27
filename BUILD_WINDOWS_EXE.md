@@ -14,13 +14,26 @@ pip install -r requirements.txt
 pip install pyinstaller
 ```
 
-## 3) Сборка
+## 3) Сборка portable (рекомендуется)
 
 ```powershell
-pyinstaller --noconfirm --onefile --windowed --name trust_contract_generator main.py
+.\build_windows.bat
 ```
 
-## 4) Формирование portable-папки
+Скрипт автоматически:
+
+- ставит зависимости;
+- очищает `build/` и `dist/`;
+- собирает `onedir`-версию через PyInstaller;
+- создаёт рядом с `.exe` рабочие папки `templates/`, `data/`, `generated/`, `settings/`.
+
+## 4) Формирование portable-папки вручную (альтернатива)
+
+Если хотите собрать без `.bat`, используйте:
+
+```powershell
+pyinstaller --noconfirm --clean --windowed --onedir --name trust_communal_contract_generator --add-data "templates;templates" main.py
+```
 
 После сборки создайте рядом с `.exe` папки:
 
@@ -33,7 +46,7 @@ pyinstaller --noconfirm --onefile --windowed --name trust_contract_generator mai
 
 Итоговая portable-папка должна содержать:
 
-- `trust_contract_generator.exe`
+- `trust_communal_contract_generator.exe` (внутри `dist/trust_communal_contract_generator/`)
 - `templates/`
 - `data/`
 - `generated/`
